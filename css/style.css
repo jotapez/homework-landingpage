@@ -10,22 +10,24 @@ Developer @GA in NYC
 /* SETUP
 /*******************************************/
 
+
 /* Box Model Hack */
 
 *:before,
 *:after {
-     -moz-box-sizing: border-box; /* Firexfox */
-     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
-     box-sizing: border-box; /* IE */
-    
+    -moz-box-sizing: border-box;
+    /* Firexfox */
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome/iOS/Android */
+    box-sizing: border-box;
+    /* IE */
 }
+
 .container {
     margin: 0 auto;
     padding-left: 30px;
     padding-right: 30px;
     width: 1200px;
-    display: block;
-    
 }
 
 
@@ -69,27 +71,43 @@ body {
     font-size: 18px;
     line-height: 1.4;
     font-family: OpenSans;
-    background-size: cover;
     margin bottom: 22px;
     background: #efefee;
 }
+
 
 /******************************************
 /* Button
 /*******************************************/
 
+.main-button {
+     text-align: center;
+     width: 100%;
+}
+
 .btn {
+    text-align: center;
     border-radius: 5px;
     display: inline-block;
     padding: 13px 80px;
     background: #f9e42e;
     font-size: 28px;
     font-weight: 700;
-    width: 200px;
     margin: 50px;
     color: #043049;
 }
 
+.btn:hover {
+    text-align: center;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 13px 80px;
+    background: #c6b520;
+    font-size: 28px;
+    font-weight: 700;
+    margin: 50px;
+    color: #043049;
+}
 .btn-alt {
     border-radius: 5px;
     display: inline-block;
@@ -119,7 +137,6 @@ body {
     display: inline-block;
     margin: 5px;
     padding: 10px 10px;
-    
 }
 
 .facebook {
@@ -127,13 +144,18 @@ body {
     display: inline-block;
     margin: 5px;
     padding: 50px 30px;
-    
 }
 
 
 /******************************************
-/* LAYOUT
+/* HEADER
 /*******************************************/
+
+header {
+    height: 150px;
+    background: #043049;
+    background-size: cover;
+}
 
 .logo {
     margin: 0;
@@ -145,17 +167,41 @@ body {
     float: left;
 }
 
-header {
-    text-align: center;
+header li {
+    list-style-type: none;
+    display: inline;
+}
+
+header ul {
+    padding: 70px 0 0;
+    float: right;
+}
+
+header a {
+    margin: 25px;
+    color: yellow;
+    text-decoration: none;
+}
+
+header a:hover {
+    color: #c6b520;
+}
+
+/******************************************
+/* CONTENT LANDING PAGE
+/*******************************************/
+
+#hero {
     height: 700px;
     background: #f1f1f1 url("../images/header_bg.jpg") center;
     background-size: cover;
-    
+    width: 100%;
 }
 
-header h1 {
-    padding: 100px 0 0;
-    
+#hero h2 {
+    text-align: center;
+    color: white;
+    padding: 250px 0 0;
 }
 
 .benefits {
@@ -186,6 +232,120 @@ header h1 {
     padding: 80px 0 0;
 }
 
+
+/******************************************
+/* CONTENT BLOG
+/*******************************************/
+
+#main {
+    float: left;
+    margin: 0 auto;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    width: 800px;
+    display: block;
+}
+
+article {
+    padding: 50px 0 0;
+}
+
+article img {
+    width: 800px;
+    padding: 20px 0;
+}
+
+.firstcharacter {
+    float: left;
+    color: black;
+    font-size: 90px;
+    line-height: 50px;
+    padding-top: 2px;
+    padding-right: 8px;
+    padding-left: 3px;
+    font-family: OpenSans;
+}
+
+article a {
+    float: right;
+    padding: 20px 0;
+    text-decoration: none;
+    color: #043049;
+    font-weight: bold
+}
+
+article a:hover {
+    float: right;
+    padding: 20px 0;
+    text-decoration:underline;
+    color: #043049;
+    font-weight: bold
+}
+
+hr {
+    clear: both;
+}
+
+#sidebar {
+    margin: 0 auto;
+    padding-left: 30px;
+    width: 310px;
+    display: block;
+    float: left;
+}
+
+#sidebar h3 {
+    padding: 50px 0 0;
+    font-size: 30px;
+    font-weight: bold;
+    color: #043049;
+}
+
+#sidebar nav {
+    padding: 20px 0 0;
+}
+
+#sidebar li {
+    padding: 5px;
+}
+
+#sidebar a {
+    color: #043049;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+#sidebar a:hover {
+    color: #13628e;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+#sidebar aside p {
+    padding: 20px 0 0;
+}
+
+#sidebar aside h4 {
+    padding: 50px 0 0;
+    font-size: 30px;
+    font-weight: bold;
+    color: #043049;
+    text-align: center;
+}
+
+.add {
+    margin-top: 50px;
+    margin-bottom: 70px;
+    text-align: center;
+    height: 658px;
+    background: #ffffff center;
+}
+
+
+/******************************************
+/* CALL TO ACTION
+/*******************************************/
+
 #cta {
     clear: both;
     text-align: center;
@@ -193,7 +353,11 @@ header h1 {
     background: #f9e42e center;
 }
 
-    
+
+/******************************************
+/* FOOTER
+/*******************************************/
+
 footer {
     text-align: center;
     height: 400px;
@@ -224,10 +388,7 @@ small {
     color: white;
 }
 
+
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
-
-
-
-
